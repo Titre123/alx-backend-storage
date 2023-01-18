@@ -1,1 +1,2 @@
+// query c
 db.school.find({name: 'Holberton school'})
