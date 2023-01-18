@@ -12,7 +12,7 @@ if __name__ == '__main__':
     print('{} logs'.format(logs.nginx.count_documents({})))
     print('Methods:')
     for method in methods:
-        print('\tmethod {}: {}'.format(method, logs.
+        print('    method {}: {}'.format(method, logs.
               nginx.count_documents({'method': method})))
     print('{} status check'.format(logs.nginx.count_documents(
         {'method': 'GET', 'path': '/status'})))
