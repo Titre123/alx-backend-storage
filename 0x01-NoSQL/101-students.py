@@ -4,6 +4,7 @@
 
 
 def top_students(mongo_collection):
+    '''retrun avarage value'''
     return mongo_collection.aggregate([
         {
             '$project':
