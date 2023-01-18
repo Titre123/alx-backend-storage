@@ -12,10 +12,10 @@ def top_students(mongo_collection):
                 '_id': 1, 'name': 1,
                 'averageScore': {
                     '$avg': {
-                        '$avg': 'topics.score'
+                        '$avg': '$topics.score'
                         }
                     },
-                'topics': 0
+                'topics': 1
             }
         },
         {
