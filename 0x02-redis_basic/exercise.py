@@ -23,9 +23,12 @@ def count_calls(method: Callable) -> Callable:
 
 class Cache:
     def __intit__(self):
+        '''Initializes a Cache instance.
+        '''
         self._redis = redis.Redis()
         self._redis.flushdb(True)
 
+    @count_calls
     def store(self, data: typing.Union[str, bytes, int, float]) -> str:
         '''
             Stores a value in a Redis data storage and returns the key.
